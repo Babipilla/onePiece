@@ -313,11 +313,11 @@ body {
 /* --Responsive-- */
 
 @media (width <= 820px) {
-/*   .hero,
+  .hero,
   .page,
   .contact {
-    background-size: 850px 642px;
-  } */
+    background-size:cover;
+  }
 
   .hero-header ul a {
     font-size: 15px;
@@ -371,11 +371,11 @@ body {
 }
 
 @media (width <= 600px) {
-/*   .hero,
+  .hero,
   .page,
   .contact {
-    background-size: 450px 650px;
-  } */
+    background-size:cover;
+  }
   .hero-header ul {
     gap: 20px;
     margin: 40px 40px;
