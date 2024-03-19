@@ -313,10 +313,24 @@ body {
 /* --Responsive-- */
 
 @media (width <= 820px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.627),
+        rgba(0, 0, 0, 0.627)
+      ),
+      url(images/op\ hero\ mobile.jpg);
+  }
+  .page {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.627),
+        rgba(0, 0, 0, 0.627)
+      ),
+      url(images/op\ page\ mobile.jpg);
+  }
   .hero,
   .page,
   .contact {
-    background-size:cover;
+    background-size: cover;
   }
 
   .hero-header ul a {
@@ -356,7 +370,6 @@ body {
     height: 300px;
     margin-bottom: 20px;
   }
-
   .op span {
     font-size: 15px;
   }
@@ -371,11 +384,6 @@ body {
 }
 
 @media (width <= 600px) {
-  .hero,
-  .page,
-  .contact {
-    background-size:cover;
-  }
   .hero-header ul {
     gap: 20px;
     margin: 40px 40px;
