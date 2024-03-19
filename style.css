@@ -319,7 +319,7 @@ body {
         rgba(0, 0, 0, 0.627)
       ),
       url(images/op\ hero\ mobile.jpg);
-    background-attachment: scroll;
+     
   }
   .page {
     background-image: linear-gradient(
@@ -386,6 +386,9 @@ body {
 }
 
 @media (width <= 600px) {
+    .hero {
+    background-attachment: scroll; 
+  }
   .hero-header ul {
     gap: 20px;
     margin: 40px 40px;
