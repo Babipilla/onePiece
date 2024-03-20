@@ -1,4 +1,4 @@
-* {
+ * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -22,10 +22,19 @@ body {
 }
 
 .hero-header {
+  position: relative;
   display: flex;
   justify-content: space-between;
+  animation: opening 1s ease-out forwards;
 }
-
+@keyframes opening {
+  from {
+    top: -20%;
+  }
+  to {
+    top: 0%;
+  }
+}
 .hero-header ul {
   display: flex;
   gap: 60px;
@@ -54,6 +63,19 @@ body {
   transform: translateX(-50%);
   background: white;
   transition: width 0.5s;
+  animation: list 1.3s linear 1.5s;
+}
+
+@keyframes list {
+  0%,
+  100% {
+    width: 0;
+    box-shadow: 0 0 10px white, 0 0 30px white, 0 0 50px white;
+  }
+  50% {
+    width: 100%;
+    box-shadow: 0 0 10px white, 0 0 30px white, 0 0 50px white;
+  }
 }
 .hero-header ul li a:hover::after {
   width: 80%;
@@ -67,6 +89,7 @@ body {
   margin: 40px;
   z-index: 1;
 }
+
 .hero-header img:hover {
   filter: drop-shadow(0 0 10px skyblue);
 }
@@ -86,7 +109,17 @@ body {
   height: 100%;
   display: flex;
   flex-wrap: nowrap;
+  animation: navimgs 2s linear;
 }
+@keyframes navimgs {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .hero-page nav img {
   width: 150px;
   height: 150px;
@@ -105,6 +138,16 @@ body {
   margin: 30px 70px;
   display: flex;
   justify-content: space-between;
+  position: relative;
+  animation: auth 1s ease-out forwards;
+}
+@keyframes auth {
+  from {
+    bottom: -20%;
+  }
+  to {
+    bottom: 0%;
+  }
 }
 .author-name h3 {
   font-family: "Fruktur", system-ui;
@@ -314,12 +357,11 @@ body {
 
 @media (width <= 820px) {
   .hero {
-   background-image: linear-gradient(
+    background-image: linear-gradient(
         rgba(0, 0, 0, 0.627),
         rgba(0, 0, 0, 0.627)
       ),
       url(images/op\ hero\ mobile.jpg);
-     
   }
   .page {
     background-image: linear-gradient(
@@ -327,7 +369,6 @@ body {
         rgba(0, 0, 0, 0.627)
       ),
       url(images/op\ page\ mobile.jpg);
-   
   }
   .hero,
   .page,
@@ -386,8 +427,8 @@ body {
 }
 
 @media (width <= 600px) {
-    .hero {
-    background-attachment: scroll; 
+  .hero {
+    background-attachment: scroll;
   }
   .hero-header ul {
     gap: 20px;
